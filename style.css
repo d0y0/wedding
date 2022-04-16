@@ -1,0 +1,406 @@
+/* Variables */
+/* CSS */
+
+@import url(https://fonts.googleapis.com/earlyaccess/nanummyeongjo.css);
+@import url(https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css);
+@import url(https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@200;300;400;500;600;700;900&display=swap);
+@import url(https://fonts.googleapis.com/css?family=Baloo+2|Nanum+Gothic|Noto+Sans+JP|Noto+Serif+KR&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap);
+@font-face{
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif
+}
+* {
+  margin: 0;
+  padding: 0;
+  font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif
+}
+
+
+*,
+*:before,
+*:after {
+  transition: 0.35s ease;
+}
+/* body
+  overflow hidden */
+nav {
+  width:100%;
+  /* display:block;
+  margin:auto; */
+}
+nav a {
+  text-decoration: none !important;
+  color: #aaa;
+}
+nav ul li a {
+  color: #777;
+  transition: 0.3s ease;
+}
+nav ul li a:hover {
+  color: #444;
+}
+.left li.active {
+  background: none;
+  box-shadow: inset 0 -2px 0 #39cb58;
+}
+nav ul a:hover {
+  background: none;
+}
+.side-nav li {
+  padding: 0;
+}
+
+/* .navbar
+  border 0
+  margin 0
+  background-color transparent !important
+  background-color #fff
+  box-shadow 0 1px 5px rgba(0, 0, 0, 0.1)
+
+.navbar-header
+  padding 5px
+
+.navbar-toggle
+  border 0
+  padding 0
+  font-size 25px
+  padding 5px
+  background none !important
+
+.navbar-toggle .icon-bar
+  height 1px */
+/* a.brand-logo {
+  background-image: url("//multiplier.in/team-img/frontpage%20BG/multiplier - logo.png");
+  height: 100%;
+  width: 150px;
+  background-size: 100% 100%;
+} */
+.navbar-fixed{
+  width:100%;
+  height:100%;
+  position:absolute;
+}
+.navbar-fixed nav {
+  width:100%;
+  height:100%;
+  box-shadow: 0 1px 5px rgba(0,0,0,0.15);
+  border-bottom: 1px solid #ccc;
+}
+.navbar-nav li a {
+  font-family: Lato;
+  font-size: 14px;
+  padding: 20px;
+/* padding: 25px !important; */
+}
+ul.left.hide-on-med-and-down {
+  margin-left: 160px;
+}
+.mainLinks:first-child {
+  padding-right: 0;
+}
+.side-nav .brand-logo {
+  background: url("https://multiplier.in/team-img/frontpage%20BG/multiplyer - symbol.png");
+}
+.side-nav a.mainLinks {
+  padding: 5px;
+  height: auto;
+}
+button.center-block {
+  display: block;
+  width: 90%;
+  margin: 0 auto;
+}
+section {
+  height: 100vh;
+  /* padding-top: 20px !important; */
+  background-color: #fff;
+  transition: 0.5s ease;
+  text-align: center;
+  touch-action: none;
+}
+section h1 {
+  margin: 0;
+}
+.onepage-pagination {
+  transform: translateY(-50%);
+  background-color: rgba(255,255,255,0.85);
+  border-radius: 15px;
+}
+.onepage-pagination li a.active:before {
+  left: 5px;
+}
+.onepage-pagination li a:before {
+  left: 8px;
+}
+
+
+/* Startup,WorkspacesListing Slide */
+.section h1 {
+  font-family: "Roboto";
+  font-weight: 100;
+}
+.typed-cursor {
+  opacity: 1;
+  -webkit-animation: blink 0.7s infinite;
+  animation: blink 0.7s infinite;
+}
+@-webkit-keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+
+#page-5 {
+  margin: 0;
+  height: 100%;
+  width: 100%;
+}
+#page-5 .nav-pills {
+  text-align: center;
+  width: 75%;
+  margin: 25px auto 30px;
+  border-radius: 5px;
+  box-shadow: 0 2px 1.5px rgba(0,0,0,0.3);
+  overflow: hidden;
+}
+#page-5 .nav-pills li {
+  display: inline-block;
+  width: 25%;
+  text-align: center;
+  margin-left: 0;
+  border-right: 1px solid rgba(0,0,0,0.2);
+}
+#page-5 .nav-pills li:last-child {
+  border-right: none;
+}
+#page-5 .nav-pills li a {
+  text-transform: capitalize;
+  padding: 10px 15px;
+  border-radius: 0;
+  font-family: Roboto;
+  font-weight: 100;
+  font-size: 25px;
+  color: #000;
+  background-color: rgba(250,246,156,0.4);
+}
+#page-5 .nav-pills > li.active > a,
+#page-5  .nav-pills > li.active > a:focus,
+#page-5  .nav-pills > li.active > a:hover {
+  background-color: rgba(217,230,149,0.4);
+  box-shadow: inset 0 -3px 12.5px 2px rgba(0,0,0,0);
+}
+#page-5 .nav>li>a:focus,
+#page-5 .nav>li>a:hover {
+  background-color: rgba(0,0,0,0.3);
+}
+#page-5 .tab-content .pane {
+  display: none;
+}
+#page-5 .tab-content .pane.active {
+  display: block;
+}
+.autoplay .slide {
+  height: 200px;
+  line-height: 200px;
+  margin: 10px;
+  text-align: center;
+  box-shadow: inset 0 0 0 1px #bbb;
+  color: #aaa;
+  background-color: #fff;
+  font-size: 10rem;
+}
+.autoplay .slick-arrow {
+  height: 100%;
+  width: 25%;
+  text-align: center;
+  z-index: 100;
+}
+.autoplay .slick-prev,
+.autoplay .ion-ios-arrow-left {
+  background: linear-gradient(90deg, #fff, transparent);
+}
+.autoplay .slick-next,
+.autoplay .ion-ios-arrow-right {
+  background: linear-gradient(-90deg, #fff, transparent);
+}
+.autoplay .slick-prev:before,
+.autoplay .slick-next:before {
+  color: #555;
+  font-size: 50px;
+}
+#page-5 .col-md-3.slick-slide.slick-active {
+  outline: none;
+}
+#page-5 .card .card-action {
+  text-align: center;
+}
+/* Website Preview Slide */
+#page-4.active > #site-demo {
+  position: fixed;
+  bottom: -80px;
+}
+/* #page-6 {
+  height: 800px
+} */
+
+
+.bus-button {
+  position : relative;
+  /* float:left; */
+  padding:8px 8px;
+  background:#ffffff;
+  display: inline-block;
+  width:200px;
+  margin:10px 10px 0px 10px;
+  border-radius: 10px;
+  font-size:15px;
+  /* border-radius:3px; */
+  /* -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
+  text-align:center;
+  font-size:0.8em;
+  box-shadow: 0px 1px 4px rgba(0,0,0, 0.10);
+  -moz-box-shadow: 0px 1px 4px rgba(0,0,0, 0.10);
+  -webkit-box-shadow: 0px 1px 4px rgba(0,0,0, 0.10); */
+  }
+
+
+.stacked {
+  position: relative;
+}
+/* Card Stacked */
+.stacked.segment:after,
+.stacked.segment:before,
+.stacked.segments:after,
+.stacked.segments:before {
+  content: '';
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  border-top: 1px solid rgba(34,36,38,0.15);
+  background: rgba(0,0,0,0.03);
+  width: 100%;
+  height: 6px;
+  visibility: visible;
+}
+.stacked.segment:after,
+.stacked.segment:before,
+.ui.stacked.segments:after,
+.stacked.segments:before {
+  content: '';
+  position: absolute;
+  bottom: -13px;
+  left: 0;
+  border-top: 1px solid rgba(34,36,38,0.15);
+  background: rgba(0,0,0,0.03);
+  width: 100%;
+  height: 6px;
+  visibility: visible;
+}
+.tall.stacked.segment:before,
+.tall.stacked.segments:before {
+  display: block;
+  bottom: 0;
+}
+/* Utility Classes
+ ---------------------------------*/
+.btn:hover,
+.btn:active {
+  color: #eee;
+}
+.margin-t0,
+.margin-l0,
+.margin-r0,
+.margin-b0 {
+  margin: 0;
+}
+.pull-none {
+  float: none !important;
+}
+@media only screen and (min-width: 660px) {
+  #site-demo img {
+    width: 650px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  #page-1 .bottom {
+    width: 100%;
+  }
+  #page-2 p {
+    font-size: 15px;
+    /* padding: 10px; */
+  }
+  #page-2 h3 {
+    font-size: 18px;
+    /* padding: 10px; */
+  }
+
+  #page-5 h1 {
+    font-size: 30px;
+    padding: 10px;
+  }
+  #page-5 p {
+    font-size: 15px;
+    color: #000000;
+  }
+  #page-5 span {
+    font-size: 15px;
+    color: #000000;
+    line-height: 50px;
+  }
+
+  #page-5 .nav-pills {
+    width: 100%;
+    margin: 0;
+    margin-bottom: 10px;
+  }
+  #page-5 .nav-pills li a {
+    font-size: 15px;
+  }
+  /* #page-4 #site-demo {
+    bottom: -50px;
+  } */
+  #page-4 h1 {
+    font-size: 30px;
+    color: #000000;
+    padding: 10px;
+  }
+}
+@media only screen and (max-width: 400px) {
+  #page-1 #intro-hero {
+    font-size: 30px;
+  }
+  #page-7 .card-panel {
+    padding: 5px;
+  }
+}
+@-webkit-keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

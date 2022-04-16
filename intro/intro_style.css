@@ -1,0 +1,65 @@
+/* General Introduction Slide */
+#page-1 {
+  background:
+   url(
+     "../resource/TWO2.jpg"
+
+  );
+  width:100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+#intro-hero {
+  margin-top: 90%;
+  color: #fff;
+  font-weight: bold;
+  text-shadow: 1px 1px 0.5px rgba(0,0,0,0.3);
+}
+.white-grad {
+  color: #fff;
+  text-shadow: 1px 1px 0.5px rgba(0,0,0,0.3);
+}
+#page-1 h3 {
+  font-size: 20px;
+  margin: 5px 0;
+  opacity: 0.8;
+}
+
+#page-1 .flash-preview {
+  position: static;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  padding: 0px;
+  color: #fff;
+  font-family: "Roboto";
+}
+.navbar-fixed {
+  position: absolute;
+}
+#intro-hero,
+#page-1 h3.h2,
+#free {
+  visibility: hidden;
+}
+/* What is Multiplier Slide */
+#page-2 {
+
+  background: -webkit-linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0), rgba(0,0,0,0), rgba(0,0,0,0));
+
+  /* z-index: 100; */
+}
+#page-3{
+  background: -webkit-linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0), rgba(0,0,0,0), rgba(0,0,0,0));
+}
+#page-4{
+  background: -webkit-linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0), rgba(0,0,0,0), rgba(0,0,0,0));
+}
+#page-5{
+  background: -webkit-linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0), rgba(0,0,0,0), rgba(0,0,0,0));
+}
+#page-6{
+  background: -webkit-linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0), rgba(0,0,0,0), rgba(0,0,0,0));
+}
