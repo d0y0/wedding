@@ -1,0 +1,106 @@
+
+#page-4 p{
+  font-size: 16px;
+  /* font-family: 'Dongle'; */
+  line-height:1.2em;
+}
+#page-5 span {
+  font-size: 30px;
+  font-family: 'Dongle';
+  line-height:1.1em;
+  font-weight:bold;
+}
+
+#page-5 p {
+  font-size: 16px;
+  /* font-family: 'Dongle'; */
+  line-height:1.0em;
+}
+#page-6 {
+  margin: 0;
+  height: 100%;
+  width: 100%;
+}
+#page-6 .nav-pills {
+  text-align: center;
+  width: 100%;
+  margin: 10px auto 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 1.5px rgba(0,0,0,0.3);
+  overflow: hidden;
+}
+#page-6 .nav-pills li {
+  display: inline-block;
+  width: 50%;
+  text-align: center;
+  margin-left: 0;
+  border-right: 1px solid rgba(0,0,0,0.2);
+}
+#page-6 .nav-pills li:last-child {
+  border-right: none;
+}
+#page-6 .nav-pills li p {
+  text-transform: capitalize;
+  font-size: 40px;
+  font-family: 'Dongle';
+  font-weight: 100;
+  color: #000;
+  line-height:0.7em;
+  font-weight:bold;
+}
+#page-6 .tab-content div p {
+  font-size: 16px;
+  /* font-family: 'Dongle'; */
+  /* font-weight: 100; */
+  line-height:0.3em;
+  padding: 5px;
+  /* font-weight:bold; */
+}
+
+#page-6 .nav-pills li a {
+  text-transform: capitalize;
+  padding: 15px 0px 3px 0px;
+  border-radius: 0;
+  background-color: rgba(250,246,156,0.4);
+}
+#page-6 .nav-pills > li.active > a,
+#page-6  .nav-pills > li.active > a:focus,
+#page-6  .nav-pills > li.active > a:hover {
+  background-color: rgba(217,230,149,0.4);
+  box-shadow: inset 0 -3px 12.5px 2px rgba(0,0,0,0);
+}
+#page-6 .nav>li>a:focus,
+#page-6 .nav>li>a:hover {
+  background-color: rgba(0,0,0,0.3);
+}
+#page-6 .tab-content .pane {
+  display: none;
+}
+#page-6 .tab-content .pane.active {
+  display: block;
+}
+#page-6 .col-md-3.slick-slide.slick-active {
+  outline: none;
+}
+#page-6 .card .card-action {
+  text-align: center;
+}
+
+.bus-button {
+  position : relative;
+  /* float:left; */
+  padding:15px 8px;
+  background-color: rgba(217,230,149,0.4);
+  font-size: 20px;
+  /* background:#ffffff; */
+  font-weight:bold;
+  display: inline-block;
+  width:250px;
+  margin:10px 10px 0px 10px;
+  border-radius: 10px;
+  font-size: 20px;
+  /* font-family: 'Dongle'; */
+  font-weight: 100;
+  color: #000;
+  font-weight:bold;
+  }

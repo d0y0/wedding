@@ -5,9 +5,9 @@
 // You can change global variables here:
 var radius = 240; // how big of the radius
 var autoRotate = true; // auto rotate or not
-var rotateSpeed = -60; // unit: seconds/360 degrees
-var imgWidth = 120; // width of images (unit: px)
-var imgHeight = 170; // height of images (unit: px)
+var rotateSpeed = 360; // unit: seconds/360 degrees
+var imgWidth = 133; // width of images (unit: px)
+var imgHeight = 201; // height of images (unit: px)
 
 // Link of background music - set 'null' if you dont want to play background music
 
@@ -27,8 +27,7 @@ var imgHeight = 170; // height of images (unit: px)
 var odrag = document.getElementById('drag-container');
 var ospin = document.getElementById('spin-container');
 var aImg = ospin.getElementsByTagName('img');
-var aVid = ospin.getElementsByTagName('video');
-var aEle = [...aImg, ...aVid]; // combine 2 arrays
+var aEle = aImg
 
 // Size of images
 ospin.style.width = imgWidth + "px";
@@ -51,6 +50,9 @@ function applyTranform(obj) {
   // Constrain the angle of camera (between 0 and 180)
   if(tY > 180) tY = 180;
   if(tY < 0) tY = 0;
+
+  // FIX y
+  tY = 0;
 
   // Apply the angle
   obj.style.transform = "rotateX(" + (-tY) + "deg) rotateY(" + (tX) + "deg)";
@@ -75,46 +77,32 @@ if (autoRotate) {
 
 // setup events
 document.onpointerdown = function (e) {
-  clearInterval(odrag.timer);
   e = e || window.event;
   var sX = e.clientX;
-      // sY = e.clientY;
+  var sY = e.clientY;
 
   this.onpointermove = function (e) {
     e = e || window.event;
     var nX = e.clientX;
-        // nY = e.clientY;
+        nY = e.clientY;
     desX = nX - sX;
-    // desY = nY - sY;
+    desY = nY - sY;
     tX += desX * 0.1;
-    // tY += desY * 0.1;
-    applyTranform(odrag);
+    tY += desY * 0.1;
     sX = nX;
-    // sY = nY;
+    sY = nY;
   };
 
   this.onpointerup = function (e) {
-    odrag.timer = setInterval(function () {
-      desX *= 0.95;
-      desY *= 0.95;
-      tX += desX * 0.1;
-      tY += desY * 0.1;
-      applyTranform(odrag);
-      playSpin(false);
-      if (Math.abs(desX) < 0.5 && Math.abs(desY) < 0.5) {
-        clearInterval(odrag.timer);
-        playSpin(true);
-      }
-    }, 17);
-    this.onpointermove = this.onpointerup = null;
+    applyTranform(odrag);
   };
 
   return false;
 };
 
-document.onmousewheel = function(e) {
-  e = e || window.event;
-  var d = e.wheelDelta / 20 || -e.detail;
-  radius += d;
-  init(1);
-};
+// document.onmousewheel = function(e) {
+//   e = e || window.event;
+//   var d = e.wheelDelta / 20 || -e.detail;
+//   radius += d;
+//   init(1);
+// };
