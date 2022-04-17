@@ -139,9 +139,9 @@ section h1 {
 
 
 /* Website Preview Slide */
-#page-3.active > #site-demo {
+#spin-container > #site-demo {
   position: fixed;
-  bottom: -80px;
+  bottom: -50%;
 }
 
 .page-title {
