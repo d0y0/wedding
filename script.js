@@ -4,11 +4,8 @@
 // https://stackoverflow.com/questions/37827505/how-do-i-stop-a-js-driven-full-page-scroll-from-jumping-to-the-start-end
 
 var cur_idx = 0
-var before_time = new Date();
 
 $(document).ready(function() {
-
-
   $(".button-collapse").sideNav();
   $('.tooltipped').tooltip({
     delay: 50
@@ -133,6 +130,11 @@ $(document).ready(function() {
   }, 1000);
 
 
+  $(".fa-chevron-down").each(function () {
+    $(this).css("opacity", "1");
+  });
+
+
 
   function preventDefault(e) {
     e.preventDefault();
@@ -155,34 +157,6 @@ $(document).ready(function() {
   var wheelOpt = supportsPassive ? { passive: false } : false;
   var wheelEvent = 'onwheel' in document.createElement('div') ? 'wheel' : 'mousewheel';
 
-  // call this to Disable
-  function disableScroll() {
-    //$(".main").moveTo(3)
-    window.addEventListener('DOMMouseScroll', preventDefault, false); // older FF
-    window.addEventListener(wheelEvent, preventDefault, wheelOpt); // modern desktop
-    window.addEventListener('touchmove', preventDefault, wheelOpt); // mobile
-    window.addEventListener('keydown', preventDefaultForScrollKeys, false);
-    $('body').addClass('scrollDisable').on('scroll touchmove mousewheel', function(e){
-            e.preventDefault();
-            e.stopPropagation();
-            return false;
-        });
-  }
-
-
-  // call this to Enable
-  function enableScroll() {
-    window.removeEventListener('DOMMouseScroll', preventDefault, false);
-    window.removeEventListener(wheelEvent, preventDefault, wheelOpt);
-    window.removeEventListener('touchmove', preventDefault, wheelOpt);
-    window.removeEventListener('keydown', preventDefaultForScrollKeys, false);
-    $('body').removeClass('scrollDisable').off('scroll touchmove mousewheel');
-  }
-
-
-
-
-
 
 
   $("body").velocity("transition.fadeIn");
@@ -197,44 +171,5 @@ $(document).ready(function() {
   });
 
   $("#page-1 #intro-hero").add("#free").add("#page-1 h3.h2").css("visibility", "visible").velocity("transition.slideUpBig");
-
-
-  /* Third Page */
-  $(function() {
-    $(".typed_trans").typed({
-      strings: ["(대중교통)^550", "(자차)^550", "(전세버스)^550"],
-      typeSpeed: 130,
-      loop: true
-    });
-    $('.autoplay').slick({
-      slidesToShow: 3,
-      slidesToScroll: 1,
-      autoplay: true,
-      autoplaySpeed: 1500,
-      responsive: [{
-          breakpoint: 1024,
-          settings: {
-            slidesToShow: 3,
-            slidesToScroll: 1,
-            infinite: true,
-            dots: true
-          }
-        }, {
-          breakpoint: 600,
-          settings: {
-            slidesToShow: 2,
-            slidesToScroll: 1
-          }
-        }, {
-          breakpoint: 480,
-          settings: {
-            slidesToShow: 1,
-            slidesToScroll: 1
-          }
-        }
-      ]
-    });
-
-  });
 
 });
