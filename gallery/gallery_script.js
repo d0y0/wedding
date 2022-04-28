@@ -8,6 +8,7 @@ var autoRotate = false; // auto rotate or not
 var rotateSpeed = 360; // unit: seconds/360 degrees
 var imgWidth = 133; // width of images (unit: px)
 var imgHeight = 201; // height of images (unit: px)
+var isStartGallery = false;
 
 // Link of background music - set 'null' if you dont want to play background music
 
@@ -75,7 +76,10 @@ var sX, sY, nX, nY, desX = 0,
     tX = 0,
     tY = 10;
 
-
+if (autoRotate == true) {
+  var animationName = (rotateSpeed > 0 ? 'spin' : 'spinRevert');
+  ospin.style.animation = `${animationName} ${Math.abs(rotateSpeed)}s infinite linear`;
+}
 
 
 
@@ -86,6 +90,9 @@ document.onpointerdown = function (e) {
   var sY = e.clientY;
 
   this.onpointermove = function (e) {
+    if (isStartGallery == false){
+      return;
+    }
     e = e || window.event;
     var nX = e.clientX;
         nY = e.clientY;
