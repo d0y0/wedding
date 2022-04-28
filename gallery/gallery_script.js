@@ -42,8 +42,8 @@ ground.style.height = radius * 3 + "px";
 function init(delayTime) {
 
   // auto spin
-  if (autoRotate == false) {
-    autoRotate = true;
+  if (isStartGallery == false) {
+    isStartGallery = true;
     var animationName = (rotateSpeed > 0 ? 'spin' : 'spinRevert');
     ospin.style.animation = `${animationName} ${Math.abs(rotateSpeed)}s infinite linear`;
   }
@@ -90,18 +90,17 @@ document.onpointerdown = function (e) {
   var sY = e.clientY;
 
   this.onpointermove = function (e) {
-    if (isStartGallery == false){
-      return;
-    }
-    e = e || window.event;
-    var nX = e.clientX;
-        nY = e.clientY;
-    desX = nX - sX;
-    desY = nY - sY;
-    tX += desX * 0.1;
-    tY += desY * 0.1;
-    sX = nX;
-    sY = nY;
+    if (isStartGallery == true){
+      e = e || window.event;
+      var nX = e.clientX;
+          nY = e.clientY;
+      desX = nX - sX;
+      desY = nY - sY;
+      tX += desX * 0.1;
+      tY += desY * 0.1;
+      sX = nX;
+      sY = nY;
+    );
   };
 
   this.onpointerup = function (e) {
