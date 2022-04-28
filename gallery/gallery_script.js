@@ -4,7 +4,7 @@
 
 // You can change global variables here:
 var radius = 240; // how big of the radius
-var autoRotate = true; // auto rotate or not
+var autoRotate = false; // auto rotate or not
 var rotateSpeed = 360; // unit: seconds/360 degrees
 var imgWidth = 133; // width of images (unit: px)
 var imgHeight = 201; // height of images (unit: px)
@@ -39,6 +39,14 @@ ground.style.width = radius * 3 + "px";
 ground.style.height = radius * 3 + "px";
 
 function init(delayTime) {
+
+  // auto spin
+  if (autoRotate == false) {
+    autoRotate = true;
+    var animationName = (rotateSpeed > 0 ? 'spin' : 'spinRevert');
+    ospin.style.animation = `${animationName} ${Math.abs(rotateSpeed)}s infinite linear`;
+  }
+
   for (var i = 0; i < aEle.length; i++) {
     aEle[i].style.transform = "rotateY(" + (i * (360 / aEle.length)) + "deg) translateZ(" + radius + "px)";
     aEle[i].style.transition = "transform 1s";
@@ -67,11 +75,7 @@ var sX, sY, nX, nY, desX = 0,
     tX = 0,
     tY = 10;
 
-// auto spin
-if (autoRotate) {
-  var animationName = (rotateSpeed > 0 ? 'spin' : 'spinRevert');
-  ospin.style.animation = `${animationName} ${Math.abs(rotateSpeed)}s infinite linear`;
-}
+
 
 
 
