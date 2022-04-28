@@ -67,7 +67,8 @@ var sX, sY, nX, nY, desX = 0,
     tX = 0,
     tY = 10;
 
-if (autoRotate == true) {
+// auto spin
+if (autoRotate) {
   var animationName = (rotateSpeed > 0 ? 'spin' : 'spinRevert');
   ospin.style.animation = `${animationName} ${Math.abs(rotateSpeed)}s infinite linear`;
 }
